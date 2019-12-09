@@ -1,14 +1,12 @@
 package com.poortoys.examples;
 
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
+import javax.enterprise.inject.Model;
 
 /**
  * Sample Backing Bean for JavaServer Faces.
  *
  */
-@Named
-@RequestScoped
+@Model
 public class HelloBean {
 
     public String getMessage() {
