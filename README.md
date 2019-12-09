@@ -1,2 +1,14 @@
 # jakartaee-webapp-quickstart-archetype
-Archetype for Jakarta EE Web Application Quick Start
+Jakarta EE 8 Web application quick start template with Jakarta Server Faces and Jakarta RESTful Web Services.
+
+## Requirements
+
+* JDK 8 and Maven 3 to build.
+* Jakarta EE 8 server to test sample applications.
+
+## How to use
+
+1. Create Maven project using this archetype.
+2. Run `mvn install` command to build.
+3. Open http://*hostname*:*port*/*context-root*/index.xhtml to test Jakarta Server Faces.
+4. Open http://*hostname*:*port*/*context-root*/api/hello to test Jakarta RESTful Web Services.
