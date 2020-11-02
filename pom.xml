@@ -120,7 +120,7 @@
       <id>internal.snapshot.repo</id>
       <name>Internal Snapshot Repository</name>
       <uniqueVersion>false</uniqueVersion>
-      <url>file://${user.home}/maven2</url>
+      <url>file://${user.home}/git/maven2</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
