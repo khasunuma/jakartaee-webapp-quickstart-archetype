@@ -13,7 +13,7 @@
       <extension>
         <groupId>org.apache.maven.archetype</groupId>
         <artifactId>archetype-packaging</artifactId>
-        <version>3.1.2</version>
+        <version>3.2.0</version>
       </extension>
     </extensions>
     <pluginManagement>
@@ -21,7 +21,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-archetype-plugin</artifactId>
-          <version>3.1.2</version>
+          <version>3.2.0</version>
         </plugin>
       </plugins>
     </pluginManagement>
@@ -29,7 +29,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>3.2.1</version>
         <executions>
           <execution>
             <id>attach-sources</id>
@@ -39,6 +39,11 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.8.2</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -68,7 +73,7 @@
   <!-- More Project Information -->
   <name>Archetype for Jakarta EE Web Application Quick Start</name>
   <description>Jakarta EE Web application quick start template with Jakarta Server Faces and Jakarta RESTful Web Services</description>
-  <url>https://github.com/khasunuma/jakartaee-quickstart-archetype</url>
+  <url>https://github.com/khasunuma/jakartaee-webapp-quickstart-archetype</url>
   <inceptionYear>2018</inceptionYear>
   <licenses>
     <license>
@@ -112,9 +117,10 @@
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
-      <id>sonatype-nexus-snapshot</id>
+      <id>internal.snapshot.repo</id>
+      <name>Internal Snapshot Repository</name>
       <uniqueVersion>false</uniqueVersion>
-      <url>http://charon.poortoys.com:8081/nexus/content/repositories/snapshots</url>
+      <url>file://${user.home}/maven2</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
