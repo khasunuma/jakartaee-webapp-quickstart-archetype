@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <!-- The Basics -->
+  <groupId>com.poortoys</groupId>
+  <artifactId>jakartaee-rest-quickstart-archetype</artifactId>
+  <version>8.0.0-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+  
+  <!-- Build Settings -->
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.1.2</version>
+      </extension>
+    </extensions>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <tagNameFormat>v@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  
+  <!-- More Project Information -->
+  <name>Archetype for Jakarta EE REST Application Quick Start</name>
+  <description>Jakarta EE REST application quick start template</description>
+  <url>https://github.com/khasunuma/jakartaee-quickstart-archetype</url>
+  <inceptionYear>2020</inceptionYear>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://github.com/khasunuma/jakartaee-webapp-quickstart-archetype/blob/master/LICENSE</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <organization>
+    <name>coppermine.jp</name>
+    <url>https://www.coppermine.jp/</url>
+  </organization>
+  <developers>
+    <developer>
+      <id>khasunuma</id>
+      <name>HASUNUMA Kenji</name>
+      <email>khasunuma@coppermine.jp</email>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>9</timezone>
+    </developer>
+  </developers>
+  
+  <!-- Environment Settings -->
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/khasunuma/jakartaee-webapp-quickstart-archetype/issues</url>
+  </issueManagement>
+  <scm>
+    <url>https://github.com/khasunuma/jakartaee-webapp-quickstart-archetype</url>
+    <connection>scm:git:https://github.com/khasunuma/jakartaee-webapp-quickstart-archetype.git</connection>
+    <developerConnection>scm:git:https://github.com/khasunuma/jakartaee-webapp-quickstart-archetype.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <name>Nexus Release Repository</name>
+      <uniqueVersion>false</uniqueVersion>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshot</id>
+      <uniqueVersion>false</uniqueVersion>
+      <url>http://charon.poortoys.com:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>
