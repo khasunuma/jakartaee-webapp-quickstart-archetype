@@ -71,8 +71,8 @@
   </build>
   
   <!-- More Project Information -->
-  <name>Archetype for Jakarta EE Web Application Quick Start</name>
-  <description>Jakarta EE Web application quick start template with Jakarta Server Faces and Jakarta RESTful Web Services</description>
+  <name>jakartaee-webapp-quickstart-archetype</name>
+  <description>Jakarta EE Web Application Quick Start Template</description>
   <url>https://github.com/khasunuma/jakartaee-webapp-quickstart-archetype</url>
   <inceptionYear>2018</inceptionYear>
   <licenses>

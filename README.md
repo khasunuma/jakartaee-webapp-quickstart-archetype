@@ -1,5 +1,5 @@
 # jakartaee-webapp-quickstart-archetype
-Jakarta EE 8 Web application quick start template with Jakarta Server Faces and Jakarta RESTful Web Services.
+Jakarta EE Web Application Quick Start Template.
 
 ## Requirements
 
